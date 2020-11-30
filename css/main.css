@@ -1,3 +1,119 @@
-/*
- * Estilos de tu proyecto
- */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #18bc9c;
+    --tertiary-color: #212529;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+header {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+header h1 {
+    font-family: lato;
+    color: white;
+    margin: 8px;
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.landing_freelancer {
+    background-color: var(--secondary-color);
+    position: relative;
+    padding: 30px 0;
+}
+
+.links-menu-principal .menu-links li {
+    display:inline;
+}
+
+.links-menu-principal {
+    padding: 0;
+    font-family: lato;
+    font-size: 17px;
+    float: left;
+    padding: 10px;
+    position: absolute;
+    top: -1%;
+    right: 2%;
+    word-spacing: 5pt;
+}
+
+.links-menu-principal a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.landing_freelancer .text-center h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white; 
+    font-size: 64px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.landing_freelancer .text-center h3 {
+    font-family: 'lato', sans-serif;
+    color: white; 
+    font-size: 24px;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.image_center {
+    height: 230px;
+    width: 230px;
+    background: url(/freelancer/assets/images/profile.png) no-repeat center;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 200px;
+    background-size: 100%;
+    margin: 0 auto 15px;
+ }
+
+ .image_star_center i {
+     color: white;
+ }
+
+/* Landing Sección Portfolio */ 
+
+.landing_portfolio h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 60px;
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.landing_portfolio .image_center_star i {
+    color: var(--tertiary-color);
+    transform: translateX(490pt);
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+ .landing_portfolio .container_box {
+    width: 80%;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.landing_portfolio .container_box .image_left_box1 {
+    height: 100px;
+    width: 100px; 
+    background-color: red;
+}
