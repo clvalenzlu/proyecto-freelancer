@@ -6,16 +6,30 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
+    padding-top: 68px;
+    font-family: 'Lato', sans-serif;
 
 }
-header {
+
+body * {
+    box-sizing: border-box;
+} 
+
+h1, h2, h3, h4, h5, h6, .links-menu-principal a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header#menu {
     background-color: var(--primary-color);
     padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
 }
 
-header h1 {
-    font-family: lato;
+header#menu h1 {
     color: white;
     margin: 8px;
     font-weight: 900;
@@ -34,7 +48,6 @@ header h1 {
 
 .links-menu-principal {
     padding: 0;
-    font-family: lato;
     font-size: 17px;
     float: left;
     padding: 10px;
@@ -54,7 +67,6 @@ header h1 {
 }
 
 .landing_freelancer .text-center h2 {
-    font-family: 'Montserrat', sans-serif;
     color: white; 
     font-size: 64px;
     text-transform: uppercase;
@@ -63,13 +75,13 @@ header h1 {
 }
 
 .landing_freelancer .text-center h3 {
-    font-family: 'lato', sans-serif;
     color: white; 
     font-size: 24px;
     text-transform: capitalize;
     margin: 0;
     margin-bottom: 15px;
     margin-top: 15px;
+    font-weight: 500;
 }
 
 .image_center {
@@ -89,31 +101,265 @@ header h1 {
 
 /* Landing Sección Portfolio */ 
 
+.landing_portfolio {
+    text-align: center;
+    padding: 60px 0 80px;
+}
+
 .landing_portfolio h2 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 60px;
     font-weight: 900;
     font-size: 28px;
-    text-align: center;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
-.landing_portfolio .image_center_star i {
-    color: var(--tertiary-color);
-    transform: translateX(490pt);
-    margin: 0;
+.icon_star {
     margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
 }
 
- .landing_portfolio .container_box {
+.icon_star:before,
+.icon_star:after {
+    content: "";
+    width: 70px;
+    height: 6px;
+    background: var(--tertiary-color);
+    position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    margin: 26px 0;
+}
+
+.icon_star:before {
+    left: -85px;
+}
+
+.icon_star:after {
+    right: -85px;
+}
+
+.icon_light {
+    color:white; 
+}
+
+.icon_light:after , .icon_light:before {
+    background: white;
+}
+
+.landing_portfolio .container_box {
     width: 80%;
+    max-width: 1080px;
     margin: 0 auto;
-    background-color: red;
 }
 
-.landing_portfolio .container_box .image_left_box1 {
-    height: 100px;
-    width: 100px; 
-    background-color: red;
+.landing_portfolio .container_box .box {
+    width: 30%;
+    display: inline-block;
+    margin: 10px 1.5%;
+}
+
+.landing_portfolio .container_box .box img {
+    max-width: 100%;
+}
+
+
+/* Landing Sección About */ 
+
+.landing_about {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 60px 0 80px;
+}
+
+.landing_about h2 {
+    margin: 60px;
+    font-weight: 900;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: white;
+
+}
+
+.landing_about .btn {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.landing_about .about_box {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    color: white;
+}
+
+.landing_about .about_box .box-about_left,
+.landing_about .about_box .box-about_right {
+    width: 30%;
+    display: inline-block;
+    margin: 10px 1.5%;
+}
+
+.landing_about .about_box p {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin: 5px;
+    text-align: left;
+}
+
+
+/* Landing Sección Contact Me */ 
+
+.landing_contactme {
+    text-align: center;
+    padding: 60px 0 80px; 
+}
+
+.landing_contactme h2 {
+    font-weight: 900;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--tertiary-color);
+}
+
+.landing_contactme .form-contactme {
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+.landing_contactme input, .landing_contactme textarea {
+    border: none;
+    border-bottom: 2px solid #e0dddb;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 8px 0;
+}
+
+.landing_contactme input:focus, 
+.landing_contactme textarea:focus {
+    outline: none;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.landing_contactme input::placeholder, 
+.landing_contactme textarea::placeholder {
+    text-transform: capitalize;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #9ea8b2;
+}
+
+.btn_submit {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    display: inline-block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+/* Landing Sección Footer */ 
+
+.landing_footer {
+    padding: 60px 0 80px;
+    background-color: var(--primary-color);
+
+}
+
+.landing_footer h3 {
+    color: white; 
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.landing_footer .footer_box {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.landing_footer .footer_box .footer_left,
+.landing_footer .footer_box .footer_center,
+.landing_footer .footer_box .footer_right {
+    width: 30%;
+    display: table-cell;
+    margin: 10px 1.5%;
+    min-height: 120px;
+
+}
+
+.landing_footer .footer_box p {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin: 5px;
+    color: white;
+}
+
+.landing_footer .footer_box a {
+    color: #1ea08a;
+    text-decoration: none;
+}
+
+.landing_footer .footer_box a:hover {
+    color: white;
+}
+
+.landing_footer .footer_center .social-icons {
+    text-align: center;
+    padding: 0;
+}
+
+.landing_footer .footer_center .social-icons .social-icon {
+    margin: 3px;
+    border: 1px solid white;
+    border-radius: 18px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    padding-top: 3px;
+    color: white;
+    font-size: 13px;
+}
+
+
+.landing_footer .footer_center .social-icons li {
+    display: inline-block;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
